@@ -80,10 +80,31 @@ int main() {
     // ===== Resolve these TODOs later (Part E) =====
 
     // TODO (Part E): Create a LimitedEvent with dummy data.
-    // TODO (Part E): Store the addresses of openEvent and your LimitedEvent
+    LimitedEvent limitedEvent("Robotics Workshop" , 18);
+
+    CampusEvent* event1 = &openEvent;
+    CampusEvent* event2 = &limitedEvent;
+
+    cout << "--- Polymorphsim ---" << endl;
+
+    //TOdo (Part E): Store the addresses of openEvent and your LimitedEvent
     // in two CampusEvent pointers. Call printDetails() through both pointers.
+    event1->printDetails();
+    event2->printDetails();
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
+ int attendance1 = 45;
+    int attendance2 = 80;
 
+    double rating1 = 4.2;
+    double rating2 = 4.7;
+
+    cout << "--- Function template ---" << endl;
+
+    cout << "Higher attendance estimate: "
+         << largerValue(attendance1, attendance2) << endl;
+
+    cout << "Higher event rating: "
+         << largerValue(rating1, rating2) << endl;
     return 0;
 }
