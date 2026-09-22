@@ -59,7 +59,18 @@ class LimitedEvent : public CampusEvent
 // TODO (Part D): Write a function template named largerValue.
 // It receives two const references of the same generic type and returns the larger value.
 // Do not write separate int and double versions.
-
+template <typename T>
+T largerValue(const T& value1, const T& value2)
+{
+    if (value1 > value2)
+    {
+        return value1;
+    }
+    else
+    {
+        return value2;    
+    }
+}
 int main() {
     CampusEvent openEvent("Coding Club Meeting");
 
